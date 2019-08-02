@@ -44,11 +44,11 @@ sudo make prefix=/usr/local install
 sudo apt-get install curl openssh-server ca-certificates postfix
    
 ### 邮箱设置
-![youxiang](https://github.com/DeerKing007/Ubuntu/blob/master/pic/youxiang.png)
    
 # 卸载
 apt-get purge postfix
 ```
+![youxiang](https://github.com/DeerKing007/Ubuntu/blob/master/pic/youxiang.png)
 
 ### 添加并安装GitLab包
 
@@ -57,30 +57,35 @@ apt-get purge postfix
 >>>sudo apt-get install gitlab-ce
 >>>下载的版本安装命令如下：sudo dpkg –i gitlab-ce.deb
 出现如下图表示安装成功
-![gitlab](https://github.com/DeerKing007/Ubuntu/blob/master/pic/gitlab.png)
 
 ```
+![gitlab](https://github.com/DeerKing007/Ubuntu/blob/master/pic/gitlab.png)
+
 
 ### **修改gitlab配置**
 
 ```python
 >>>sudo vim /etc/ gitlab/gitlab.rb
+```
 ![gitlab](https://github.com/DeerKing007/Ubuntu/blob/master/pic/seting01.png)
 ![gitlab](https://github.com/DeerKing007/Ubuntu/blob/master/pic/seting02.png)
 ![gitlab](https://github.com/DeerKing007/Ubuntu/blob/master/pic/seting03.png)
 ![gitlab](https://github.com/DeerKing007/Ubuntu/blob/master/pic/seting04.png)
 
+```python
 >>>sudo gitlab-ctl reconfigure   #重新启动
-![gitlab](https://github.com/DeerKing007/Ubuntu/blob/master/pic/seting05.png)
 
 ```
+![gitlab](https://github.com/DeerKing007/Ubuntu/blob/master/pic/seting05.png)
+
+
 
 ### 在浏览器访问GitLab主机名
 
 ```python
 # 如果安装gitlab的linux主机IP是192.168.0.10或者ubuntu(ubuntu为gitlab服务器的名字)，就在浏览器中输入192.168.0.10或者http://ubuntu，刷新一次，会让输入新的root密码。登录成功。
-https://github.com/DeerKing007/Ubuntu/blob/master/pic/gitlabok.png
 ```
+![gitlab](https://github.com/DeerKing007/Ubuntu/blob/master/pic/gitlabok.png)
 
 ** FQA **
 
