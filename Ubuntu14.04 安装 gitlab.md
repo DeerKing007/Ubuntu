@@ -97,11 +97,22 @@ apt-get purge postfix
 
 
 # 忘记管理员账户密码
-通过sudo gitlab-rails console production进入控制台，因为默认登陆邮箱是无用的。
-进入控制台后输入user = User.where(id: 1).first查询用户1的信息。
-通过user.password=12345678与user.password_confirmation=12345678修改密码。
-user.save!保存信息。
 
+```python
+# 进入控制台，因为默认登陆邮箱是无用的
+sudo gitlab-rails console production
+
+# 进入控制台后查询用户1的信息
+user = User.where(id: 1).first
+
+# 修改密码。
+u.password=12345678
+u.password_confirmation=12345678
+
+# 保存信息。
+user.save!
+
+```
 
 ```
 
