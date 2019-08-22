@@ -58,6 +58,16 @@ apt-get purge postfix
 >>>curl -sS http://packages.gitlab.cc/install/gitlab-ce/script.deb.sh | sudo bash
 >>>sudo apt-get install gitlab-ce
 >>>下载的版本安装命令如下：sudo dpkg –i gitlab-ce.deb
+#################################################
+首先信任 GitLab 的 GPG 公钥:
+curl https://packages.gitlab.com/gpg.key 2> /dev/null | sudo apt-key add - &>/dev/null
+vim /etc/apt/sources.list.d/gitlab-ce.list
+将下面的内容添加进上面的 gitlab-ce.list
+deb https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/ubuntu trusty main
+# 安装 gitlab-ce:
+sudo apt-get update
+sudo apt-get install gitlab-ce
+##################################
 出现如下图表示安装成功
 
 ```
@@ -76,6 +86,10 @@ apt-get purge postfix
 
 ```python
 >>>sudo gitlab-ctl reconfigure   #重新启动
+
+#################
+sudo gitlab-ctl restart
+####################
 
 ```
 ![gitlab](https://github.com/DeerKing007/Ubuntu/blob/master/pic/seting05.png)
